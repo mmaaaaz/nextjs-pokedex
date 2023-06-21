@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
-import Link from 'next/link'
-import { BsGithub } from 'react-icons/bs'
+import Link from "next/link"
+import { BsGithub } from "react-icons/bs"
 
 const Navbar = () => {
   return (

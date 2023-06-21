@@ -1,8 +1,8 @@
-import { EvolvesTo } from '@/types/EvolutionChain'
-import getBackgroundColors from '@/utils/getBackgroundColors'
-import { FC } from 'react'
-import { BsCaretRightFill } from 'react-icons/bs'
-import EvolutionImage from './EvolutionImage'
+import { EvolvesTo } from "@/types/EvolutionChain"
+import getBackgroundColors from "@/utils/getBackgroundColors"
+import { FC } from "react"
+import { BsCaretRightFill } from "react-icons/bs"
+import EvolutionImage from "./EvolutionImage"
 
 interface EvolutionChainProps {
   pokemon: any
@@ -36,7 +36,7 @@ const EvolutionChain: FC<EvolutionChainProps> = ({ pokemon }) => {
       )}
 
       {typeof pokemon.evolution?.chain.evolves_to[0]?.evolves_to !==
-        'undefined' &&
+        "undefined" &&
         pokemon.evolution?.chain.evolves_to[0].evolves_to.length !== 0 && (
           <>
             <BsCaretRightFill className="mb-8 mr-3 self-center text-lg text-secondary  xl:mr-6 " />

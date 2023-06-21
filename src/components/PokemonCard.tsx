@@ -1,12 +1,12 @@
-import { Type } from '@/types/Pokemon'
-import PokemonTypeColor from '@/utils/colors'
-import { IMG_URL } from '@/utils/constants'
-import fetcher from '@/utils/fetcher'
-import { normalizePokemonLite } from '@/utils/normalizePokemon'
-import Link from 'next/link'
-import { FC, useMemo } from 'react'
-import useSWRImmutable from 'swr/immutable'
-import { PokemonIcon } from './Icons'
+import { Type } from "@/types/Pokemon"
+import PokemonTypeColor from "@/utils/colors"
+import { IMG_URL } from "@/utils/constants"
+import fetcher from "@/utils/fetcher"
+import { normalizePokemonLite } from "@/utils/normalizePokemon"
+import Link from "next/link"
+import { FC, useMemo } from "react"
+import useSWRImmutable from "swr/immutable"
+import { PokemonIcon } from "./Icons"
 
 interface PokemonCardProps {
   url: string
@@ -49,7 +49,7 @@ const PokemonCard: FC<PokemonCardProps> = ({ url, index, ...props }) => {
             color: bgColors[0].medium,
           }}
         >
-          {`#${id.toString().padStart(3, '0')}`}
+          {`#${id.toString().padStart(3, "0")}`}
         </p>
 
         {/* The next/image component is not used here because this project is hosted by vercel and they 
@@ -59,10 +59,10 @@ const PokemonCard: FC<PokemonCardProps> = ({ url, index, ...props }) => {
           alt={name}
           height={200}
           width={200}
-          loading={index === 1 ? 'eager' : 'lazy'}
+          loading={index === 1 ? "eager" : "lazy"}
           decoding="async"
           className="drop-shadow xl:h-36 xl:w-36 2xl:h-44 2xl:w-44"
-          style={{ contentVisibility: 'auto' }}
+          style={{ contentVisibility: "auto" }}
         />
       </div>
 

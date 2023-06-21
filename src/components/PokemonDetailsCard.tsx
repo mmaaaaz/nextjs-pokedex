@@ -1,5 +1,5 @@
-import PokemonImage from './PokemonImage'
-import PokemonStats from './PokemonStats'
+import PokemonImage from "./PokemonImage"
+import PokemonStats from "./PokemonStats"
 
 interface PokemonDetailsCardProps {
   pokemon: any

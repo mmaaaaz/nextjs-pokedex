@@ -1,11 +1,11 @@
-import PokemonDetailsCard from '@/components/PokemonDetailsCard'
-import { IPokemon } from '@/types/Pokemon'
-import fetcher from '@/utils/fetcher'
+import PokemonDetailsCard from "@/components/PokemonDetailsCard"
+import { IPokemon } from "@/types/Pokemon"
+import fetcher from "@/utils/fetcher"
 
-import getPokemon from '@/utils/getPokemon'
-import { normalizePokemon } from '@/utils/normalizePokemon'
-import { GetStaticPropsContext, NextPage } from 'next'
-import Head from 'next/head'
+import getPokemon from "@/utils/getPokemon"
+import { normalizePokemon } from "@/utils/normalizePokemon"
+import { GetStaticPropsContext, NextPage } from "next"
+import Head from "next/head"
 
 interface PokemonPageProps {
   pokemon: IPokemon
@@ -15,9 +15,11 @@ const Pokemon: NextPage<PokemonPageProps> = ({ pokemon }) => {
   // Capitalize every first letter in the name
   const formatedName = pokemon.name
     .toLowerCase()
-    .split(' ')
+    .split(" ")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
+    .join(" ")
+
+  console.log(pokemon)
 
   return (
     <>
@@ -44,7 +46,7 @@ export async function getStaticProps({
   if (!(pokemonData && pokemonSpeciesData)) {
     return {
       redirect: {
-        destination: '/',
+        destination: "/",
         permanent: false,
       },
     }
@@ -70,6 +72,6 @@ export async function getStaticPaths() {
 
   return {
     paths: pokemons?.results.map((pokemon: any) => `/pokemon/${pokemon.name}`),
-    fallback: 'blocking',
+    fallback: "blocking",
   }
 }

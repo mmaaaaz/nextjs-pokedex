@@ -1,5 +1,5 @@
-import { Type } from '@/types/Pokemon'
-import PokemonTypeColor from './colors'
+import { Type } from "@/types/Pokemon"
+import PokemonTypeColor from "./colors"
 
 const getBackgroundColors = (
   type: Type[]

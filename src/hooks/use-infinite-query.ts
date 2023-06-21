@@ -1,6 +1,6 @@
-import fetcher from '@/utils/fetcher'
-import { useCallback } from 'react'
-import useSWRInfinite from 'swr/infinite'
+import fetcher from "@/utils/fetcher"
+import { useCallback } from "react"
+import useSWRInfinite from "swr/infinite"
 
 const LIMIT: number = 15
 
@@ -27,12 +27,12 @@ const useInfiniteQuery = () => {
   const isLoadingInitialData = !data && !error
   const isLoadingMore =
     isLoadingInitialData ||
-    (size > 0 && data && typeof data[size - 1] === 'undefined')
+    (size > 0 && data && typeof data[size - 1] === "undefined")
   const isEmpty = data?.[0]?.length === 0
   const isReachingEnd =
     isEmpty || (data && data[data.length - 1]?.length < LIMIT)
 
-  const next = useCallback(() => setSize((size) => size + 1), [])
+  const next = useCallback(() => setSize((size) => size + 1), [setSize])
 
   return {
     data: pokemons,

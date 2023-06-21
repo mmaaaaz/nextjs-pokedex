@@ -1,9 +1,9 @@
-import PokemonCard from '@/components/PokemonCard'
-import { useInfiniteQuery } from '@/hooks'
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useMemo } from 'react'
-import { useInView } from 'react-cool-inview'
+import PokemonCard from "@/components/PokemonCard"
+import { useInfiniteQuery } from "@/hooks"
+import type { NextPage } from "next"
+import Head from "next/head"
+import { useMemo } from "react"
+import { useInView } from "react-cool-inview"
 export interface Result {
   name: string
   url: string
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
   const { observe } = useInView({
     // For better UX, we can grow the root margin so the data will be loaded earlier
-    rootMargin: '300px',
+    rootMargin: "300px",
     // When the last item comes to the viewport
     onEnter: ({ unobserve }) => {
       // Pause observe when loading data

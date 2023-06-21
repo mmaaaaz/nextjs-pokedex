@@ -1,7 +1,7 @@
-import { Species } from '@/types/EvolutionChain'
-import { IMG_URL } from '@/utils/constants'
-import Link from 'next/link'
-import { FC } from 'react'
+import { Species } from "@/types/EvolutionChain"
+import { IMG_URL } from "@/utils/constants"
+import Link from "next/link"
+import { FC } from "react"
 
 interface EvolutionImageProps {
   species: Species
@@ -22,7 +22,7 @@ const EvolutionImage: FC<EvolutionImageProps> = ({ species, bgColor }) => {
       only allow 1000 image optimizations per month on the free tier. */}
         <img
           key={species.name}
-          src={`${IMG_URL + species.url.split('/').slice(-2, -1)[0]}.webp`}
+          src={`${IMG_URL + species.url.split("/").slice(-2, -1)[0]}.webp`}
           height={80}
           width={80}
           alt={species.name}
