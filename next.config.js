@@ -4,8 +4,6 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-
-    legacyBrowsers: false,
   },
 
   compiler: {
