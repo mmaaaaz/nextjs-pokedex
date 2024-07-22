@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar"
-import "@/styles/globals.css"
+import { cn } from "@/lib/utils"
+import { GeistMono } from "geist/font/mono"
+import "./globals.css"
 
 export const metadata = {
   title: "Pokedéx",
@@ -13,9 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-background">
         <Navbar />
-        <main className="">{children}</main>
+        <main className={(cn(GeistMono.className), "uppercase")}>
+          {children}
+        </main>
       </body>
     </html>
   )

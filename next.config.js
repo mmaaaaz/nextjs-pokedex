@@ -11,6 +11,7 @@ const nextConfig = {
   },
 
   poweredByHeader: false,
+  transpilePackages: ["geist"],
 
   images: {
     domains: ["raw.githubusercontent.com"],

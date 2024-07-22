@@ -2,22 +2,16 @@ const colors = require("tailwindcss/colors")
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-
   theme: {
-    colors: {
-      transparent: "transparent",
-      primary: {
-        DEFAULT: colors.neutral[50],
-        600: colors.neutral[100],
-      },
-      secondary: {
-        DEFAULT: colors.zinc[800],
-      },
-      accent: {
-        DEFAULT: colors.red[500],
-      },
-    },
     extend: {
+      colors: {
+        text: "rgb(var(--text))",
+        background: "rgb(var(--background))",
+        primary: "rgb(var(--primary))",
+        secondary: "rgb(var(--secondary))",
+        accent: "rgb(var(--accent))",
+      },
+
       keyframes: {
         "poke-bounce": {
           "0%, 100%": { transform: "translateY(-2%)" },

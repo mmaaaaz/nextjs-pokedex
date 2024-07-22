@@ -1,16 +1,15 @@
-/* eslint-disable react/jsx-key */
 import Link from "next/link"
 import { BsGithub } from "react-icons/bs"
 
 const Navbar = () => {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-14 w-full bg-primary px-3 shadow-md shadow-secondary/20">
+    <header className="fixed inset-x-0 border-b border-text/5 top-0 z-50 h-14 w-full px-3 backdrop-blur-lg">
       <div className="mx-auto flex h-full w-full max-w-7xl flex-row items-center justify-between">
-        <Link href="/">
-          <h1 className="text-2xl font-bold text-accent">Pokédex</h1>
+        <Link href="/" className="text-xl uppercase font-bold text-primary">
+          PokéLog
         </Link>
-        <Link href="https://github.com/Louis3797/nextjs-pokedex">
-          <BsGithub className="text-3xl duration-500 ease-in-out hover:text-accent" />
+        <Link href="https://github.com/mmaaaazu/nextjs-pokedex">
+          <BsGithub className="hover:text-primary-700 text-black text-3xl" />
         </Link>
       </div>
     </header>
