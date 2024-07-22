@@ -23,7 +23,7 @@ export const normalizePokemon = ({
     bgColors: getBackgroundColors(pokemon.types),
     types: pokemon.types,
     flavorText: species.flavor_text_entries.find(
-      (l: FlavorTextEntry) => l.language.name === "en"
+      (l: FlavorTextEntry) => l.language.name === "en",
     )?.flavor_text,
     stats: getStats({ species, pokemon }),
     evolution: evolution,
