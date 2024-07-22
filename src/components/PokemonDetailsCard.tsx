@@ -1,6 +1,6 @@
 "use client"
 
-import { Pokemon2 } from "@/types/Poke2"
+import { Pokemon } from "@/types/New"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
@@ -11,10 +11,8 @@ import Balancer from "react-wrap-balancer"
 import PokemonImage from "./PokemonImage"
 import PokemonStats from "./PokemonStats"
 
-const PokemonDetailsCard = ({ pokemon }: { pokemon: Pokemon2 }) => {
+const PokemonDetailsCard = ({ pokemon }: { pokemon: Pokemon }) => {
   const pathname = usePathname()
-
-  console.log({ abilities: pokemon.abilities, stats: pokemon.stats })
 
   return (
     <div className="flex h-full items-center justify-center w-full">

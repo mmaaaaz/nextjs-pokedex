@@ -1,13 +1,13 @@
 "use client"
 
 import PokemonDetailsCard from "@/components/PokemonDetailsCard"
-import { Pokemon2 } from "@/types/Poke2"
+import { Pokemon } from "@/types/New"
 import fetcher from "@/utils/fetcher"
 import useSWR from "swr"
 import { SpinnerIcon } from "./Icons"
 
 const PokemonOTD = () => {
-  const { data: pokemonOTD, isLoading } = useSWR<Pokemon2>(
+  const { data: pokemonOTD, isLoading } = useSWR<Pokemon>(
     "https://pokeapi.deno.dev/pokemon/potd",
     fetcher,
     {

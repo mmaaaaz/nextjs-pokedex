@@ -1,11 +1,11 @@
-import { Pokemon2 } from "@/types/Poke2"
+import { Pokemon } from "@/types/New"
 import PokemonTypeColor from "@/utils/colors"
 import Link from "next/link"
 import { FC } from "react"
 import { PokemonIcon } from "./Icons"
 
 const PokemonCard: FC<{
-  pokemon: Pokemon2
+  pokemon: Pokemon
 }> = ({ pokemon: { name, imageUrl, types, id, color } }) => {
   return (
     <Link

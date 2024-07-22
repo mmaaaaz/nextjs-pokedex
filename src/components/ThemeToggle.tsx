@@ -60,6 +60,7 @@ const ThemeButton: FC<{
           ["hover:opacity-80 dark:hover:text-primary dark:hover:opacity-100"]:
             !active,
         },
+        active && label == "Light Mode" ? "text-white" : "",
       )}
     >
       {children}

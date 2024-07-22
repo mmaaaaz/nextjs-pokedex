@@ -1,7 +1,7 @@
-import { Pokemon2 } from "@/types/Poke2"
-import { normalizePokemon } from "@/utils/normalizePokemonNew"
+import { Pokemon } from "@/types/New"
+import { normalizePokemon } from "@/utils/normalizePokemon"
 
-const PokemonStats = ({ pokemon }: { pokemon: Pokemon2 }) => {
+const PokemonStats = ({ pokemon }: { pokemon: Pokemon }) => {
   const normalizedPokemon = normalizePokemon({ pokemon })
 
   return (

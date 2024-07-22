@@ -10,8 +10,12 @@ const Navbar = () => {
           PokéLog
         </Link>
         <ThemeToggle />
-        <Link href="https://github.com/mmaaaazu/nextjs-pokedex">
-          <BsGithub className="hover:text-primary-700 text-black text-3xl" />
+        <Link
+          href="https://github.com/mmaaaazu/nextjs-pokedex"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <BsGithub className="hover:text-primary-700 text-text text-3xl" />
         </Link>
       </div>
     </header>

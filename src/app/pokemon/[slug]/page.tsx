@@ -1,4 +1,5 @@
 import PokemonDetailsCard from "@/components/PokemonDetailsCard"
+import { Pokemons } from "@/types/New"
 import { notFound } from "next/navigation"
 
 const getPokemon = async (slug: string) => {
@@ -23,18 +24,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
   )
 }
 
-// export async function generateStaticParams() {
-//   const data = await fetch("https://pokeapi.deno.dev/pokemon", {
-//     cache: "force-cache",
-//   })
+// Return a list of `params` to populate the [slug] dynamic segment
+export async function generateStaticParams() {
+  const data = await fetch("https://pokeapi.deno.dev/pokemon", {
+    cache: "force-cache",
+  })
 
-//   if (!data.ok) {
-//     throw new Error("Failed to fetch data")
-//   }
+  if (!data.ok) {
+    throw new Error("Failed to fetch data")
+  }
 
-//   const pokemons = await data.json()
+  const pokemons = (await data.json()) as Pokemons
 
-//   return pokemons.map(() => ({
-//     slug: pokemons.name.toLowerCase(),
-//   }))
-// }
+  return pokemons.map((pokemon) => ({
+    params: {
+      slug: pokemon.name.toLowerCase(),
+    },
+  }))
+}

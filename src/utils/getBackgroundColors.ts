@@ -1,10 +1,9 @@
-import { Type } from "@/types/Pokemon"
 import PokemonTypeColor from "./colors"
 
 const getBackgroundColors = (
-  type: Type[],
+  type: any,
 ): { light: string; medium: string }[] => {
-  return type.map(({ type }) => {
+  return type.map(({ type }: { type: any }) => {
     const [[, backgroundColor]] = Object.entries(PokemonTypeColor).filter(
       ([key]) => key === type.name,
     ) as any
