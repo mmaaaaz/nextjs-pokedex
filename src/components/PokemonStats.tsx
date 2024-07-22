@@ -10,7 +10,7 @@ const PokemonStats = ({ pokemon }: { pokemon: Pokemon }) => {
         {normalizedPokemon.stats.map((stat) => (
           <div
             key={stat.key}
-            className="grid grid-cols-5 lg:flex py-4 last:border-b-0 border-b px-4 items-center justify-between w-full"
+            className="grid grid-cols-5 lg:flex py-4 last:border-b-0 border-b border-primary/30 px-4 items-center justify-between w-full"
           >
             <div className="lg:w-1/4 col-span-2 text-nowrap">{stat.key}</div>
             <div className="lg:w-3/4 col-span-3 flex items-center justify-center">

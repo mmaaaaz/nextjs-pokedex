@@ -9,7 +9,7 @@ const PokemonImage = ({
   }
 }) => {
   return (
-    <div className="relative flex py-8 lg:py-0 h-full w-full items-center justify-center overflow-hidden border-r">
+    <div className="relative border-primary/30 flex py-8 lg:py-0 h-full w-full items-center justify-center overflow-hidden border-r">
       <div
         className="absolute top-8 flex font-mono uppercase select-none flex-col items-center justify-center text-4xl font-bold tracking-widest opacity-100 lg:top-32 lg:text-7xl"
         style={{
