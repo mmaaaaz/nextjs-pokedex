@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { BsGithub } from "react-icons/bs"
+import ThemeToggle from "./ThemeToggle"
 
 const Navbar = () => {
   return (
@@ -8,6 +9,7 @@ const Navbar = () => {
         <Link href="/" className="text-xl uppercase font-bold text-primary">
           PokéLog
         </Link>
+        <ThemeToggle />
         <Link href="https://github.com/mmaaaazu/nextjs-pokedex">
           <BsGithub className="hover:text-primary-700 text-black text-3xl" />
         </Link>

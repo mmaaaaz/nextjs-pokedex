@@ -1,6 +1,4 @@
-import { ColorProps } from "@/types"
-
-const PokemonTypeColor: ColorProps = {
+const PokemonTypeColor: any = {
   normal: {
     light: "#CDCDB9",
     medium: "#C4C4A4",

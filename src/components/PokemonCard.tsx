@@ -13,7 +13,7 @@ const PokemonCard: FC<{
       className="flex h-full w-full flex-col items-center justify-between border will-change-transform hover:-translate-y-1 hover:scale-101"
       style={{
         borderColor: color == "#f9fafd" ? "lightgray" : color,
-        background: `linear-gradient(0deg, #fafafa, ${color})`,
+        background: `linear-gradient(0deg, rgb(var(--background)), ${color})`,
       }}
     >
       <div className="relative flex h-2/3 w-full flex-col items-center justify-center ">
