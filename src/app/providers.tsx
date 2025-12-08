@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "next-themes"
 
-import { FC } from "react"
+import type { FC } from "react"
 
 interface ProvidersProps {
   children: React.ReactNode

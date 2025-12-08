@@ -1,26 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind CSS v4 */
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --text: 16 16 15;
-    --background: 246 245 243;
-    --primary: 78 72 50;
-    --secondary: 194 180 137;
-    --accent: 177 155 72;
+/* View Transitions API Support */
+@view-transition {
+  navigation: auto;
+}
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Custom colors using CSS variables */
+  --color-text: rgb(var(--text-rgb));
+  --color-background: rgb(var(--background-rgb));
+  --color-primary: rgb(var(--primary-rgb));
+  --color-secondary: rgb(var(--secondary-rgb));
+  --color-accent: rgb(var(--accent-rgb));
+
+  /* Custom animations */
+  --animate-poke-bounce: poke-bounce 3s ease-in-out infinite;
+}
+
+/* Color Scheme Variables */
+:root {
+  --text-rgb: 16 16 15;
+  --background-rgb: 246 245 243;
+  --primary-rgb: 78 72 50;
+  --secondary-rgb: 194 180 137;
+  --accent-rgb: 177 155 72;
+}
+
+.dark {
+  --text-rgb: 240 240 239;
+  --background-rgb: 12 11 9;
+  --primary-rgb: 205 199 177;
+  --secondary-rgb: 118 104 61;
+  --accent-rgb: 183 160 78;
+}
+
+/* Custom Keyframes */
+@keyframes poke-bounce {
+
+  0%,
+  100% {
+    transform: translateY(-2%);
   }
 
-  .dark {
-    --text: 240 240 239;
-    --background: 12 11 9;
-    --primary: 205 199 177;
-    --secondary: 118 104 61;
-    --accent: 183 160 78;
+  50% {
+    transform: translateY(0);
   }
 }
 
-,
+/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -31,16 +60,15 @@ body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
-    Segoe UI,
+    "Segoe UI",
     Roboto,
     Oxygen,
     Ubuntu,
     Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
-  background-color: #fafafa;
 }
 
 a {
@@ -52,10 +80,7 @@ a {
   box-sizing: border-box;
 }
 
-#__next {
-  @apply flex flex-row items-center justify-between;
-}
-
+/* Layout Styles */
 main {
   @apply flex-1 pt-14;
 }

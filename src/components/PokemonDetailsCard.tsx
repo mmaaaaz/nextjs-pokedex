@@ -1,6 +1,6 @@
 "use client"
 
-import { Pokemon } from "@/types/New"
+import type { Pokemon } from "@/types/New"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {

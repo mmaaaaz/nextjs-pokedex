@@ -1,4 +1,4 @@
-import { ColorProps } from "@/types"
+import type { ColorProps } from "@/types"
 import PokemonTypeColor from "./colors"
 
 const getBackgroundColors = (types: string[]) => {

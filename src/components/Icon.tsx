@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { FC, SVGProps } from "react"
+import type { FC, SVGProps } from "react"
 
 interface IconProps extends SVGProps<SVGSVGElement> {
   name: string

@@ -1,4 +1,4 @@
-import { Pokemon } from "@/types/New"
+import type { Pokemon } from "@/types/New"
 
 export const normalizePokemon = ({ pokemon }: { pokemon: Pokemon }) => {
   const data = {
